@@ -1,0 +1,37 @@
+
+.company-name {
+    font-size: 5.0rem;
+    color: white;
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    
+}
+
+.header-container{
+    padding-bottom: 10%;
+}
+
+.company-logo {
+    width: 250px; /* Taille du logo réduite */
+    height: auto;
+    position: absolute;
+    bottom: 10vh;
+    right: 20px;
+}
+
+/* Hero-Banner Section */
+.hero-banner {
+    height: 100vh; /* Occupe 50% de la hauteur de l'écran */
+    background: url('../ressources/images/bg_img.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+.hero-content{
+    text-align: center;
+
+}

@@ -1,0 +1,29 @@
+@import'./variables';
+@import'./contact-section';
+@import'./cta-button';
+@import'./footer';
+@import'./hero-banner';
+@import './modal';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+
+
+
+
