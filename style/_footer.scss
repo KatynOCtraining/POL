@@ -1,36 +1,31 @@
-
-
-
-
-
-
 /* Footer Section */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #343a40;
-    color: white;
-    height: 10vh; /* Occupe 10% de la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40;
+  color: white;
+  gap: 10px;
 }
 
 .footer-socials {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
 }
 
 .social-button {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    background-color: #007BFF;
-    border-radius: 5px;
-    font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 .legal-mentions {
-    text-decoration: none;
-    color: white;
-    font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
 }

@@ -1,37 +1,56 @@
-
 .company-name {
-    font-size: 5.0rem;
-    color: white;
-    font-family: "Bodoni Moda SC", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    
+  font-size: 5rem;
+  color: white;
+  font-family: "Bodoni Moda SC", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
 }
 
-.header-container{
-    padding-bottom: 10%;
+.header-container {
+  padding-bottom: 10%;
 }
 
 .company-logo {
-    width: 250px; /* Taille du logo réduite */
-    height: auto;
-    position: absolute;
-    bottom: 10vh;
-    right: 20px;
+  width: 250px; /* Taille du logo réduite */
+  height: auto;
+  position: absolute;
+  bottom: 10vh;
+  right: 20px;
 }
 
 /* Hero-Banner Section */
 .hero-banner {
-    height: 100vh; /* Occupe 50% de la hauteur de l'écran */
-    background: url('../ressources/images/bg_img.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  
+  height: 100vh;
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1; /* Assurez-vous que le contenu reste visible */
 }
 
-.hero-content{
-    text-align: center;
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../ressources/images/bg_img.jpg") no-repeat center
+    center/cover;
+  z-index: -2; /* L'image reste derrière l'overlay et le contenu */
+}
 
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couche noire avec opacité */
+  z-index: -1; /* Positionner derrière le contenu mais devant l'image */
+}
+.hero-content {
+  text-align: center;
 }

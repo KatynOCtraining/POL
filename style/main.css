@@ -26,24 +26,25 @@
 /* Footer Section */
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   background-color: #343a40;
   color: white;
-  height: 10vh; /* Occupe 10% de la hauteur de l'écran */
+  gap: 10px;
 }
 
 .footer-socials {
   display: flex;
   gap: 10px;
+  padding-top: 10px;
 }
 
 .social-button {
   color: white;
   text-decoration: none;
   padding: 5px 10px;
-  background-color: #007BFF;
+  background-color: #007bff;
   border-radius: 5px;
   font-size: 0.9rem;
 }
@@ -76,12 +77,35 @@ footer {
 
 /* Hero-Banner Section */
 .hero-banner {
-  height: 100vh; /* Occupe 50% de la hauteur de l'écran */
-  background: url("../ressources/images/bg_img.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  z-index: 1; /* Assurez-vous que le contenu reste visible */
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../ressources/images/bg_img.jpg") no-repeat center center/cover;
+  z-index: -2; /* L'image reste derrière l'overlay et le contenu */
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couche noire avec opacité */
+  z-index: -1; /* Positionner derrière le contenu mais devant l'image */
 }
 
 .hero-content {
@@ -110,6 +134,7 @@ footer {
   max-width: 500px;
   display: flex;
   flex-direction: column;
+  position: relative; /* Nécessaire pour positionner la croix par rapport à la modale */
 }
 
 form {
@@ -118,11 +143,15 @@ form {
 }
 
 .close {
-  position: absolute;
+  position: absolute; /* Pour pouvoir positionner l'élément dans le coin de la modale */
   top: 10px;
-  right: 10px;
+  right: 10px; /* Positionné à droite */
   font-size: 24px;
   cursor: pointer;
+}
+
+#message {
+  height: 100px;
 }
 
 * {
