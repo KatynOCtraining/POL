@@ -1,29 +1,27 @@
-@import'./variables';
-@import'./contact-section';
-@import'./cta-button';
-@import'./footer';
-@import'./hero-banner';
-@import './modal';
-
+@import "./variables";
+@import "./contact-section";
+@import "./cta-button";
+@import "./footer";
+@import "./hero-banner";
+@import "./modal";
+@import "./presentation";
+@import "./boutique";
+@import "./boutique-navbar";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    overflow: hidden;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.6;
 }
-
-
-
-

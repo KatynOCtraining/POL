@@ -29,7 +29,14 @@
             class="company-logo"
           />
         </div>
-        <button class="cta-button" id="offer-button">Notre offre</button>
+        <button
+          class="cta-button"
+          id="offer-button"
+          onclick="window.location.href='boutique.html';"
+        >
+          Notre offre
+        </button>
+
         <button class="cta-button" id="contact-button">Nous contacter</button>
       </div>
       <section class="contact-info">
@@ -49,6 +56,15 @@
       </div>
       <a href="#" class="legal-mentions">Mentions légales</a>
     </footer>
+
+    <section class="presentation">
+      <img src="./ressources/images/zz.png" alt="zz" />
+      <p>
+        Notre philosophie, la satisfaction client, la sécurité et ma sérénité
+        d'un chantier mené à bien grâce au matériel certifiés loué par Porte
+        Océane Levage. Et puis enculer le PSG, ça aussi c'est important.
+      </p>
+    </section>
 
     <!-- Modale pour le formulaire de contact -->
     <div id="contact-modal" class="modal">
@@ -74,7 +90,7 @@
           <label for="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
 
-          <button type="submit">Envoyer</button>
+          <button type="submit" class="cta-button">Envoyer</button>
         </form>
       </div>
     </div>

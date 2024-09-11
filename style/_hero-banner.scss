@@ -54,3 +54,23 @@
 .hero-content {
   text-align: center;
 }
+
+@media only screen and (max-width: 1480px) {
+  .company-logo {
+    position: static; /* Retirer la position absolue pour le centrage */
+    margin: 0 auto; /* Centrer horizontalement */
+    display: block; /* S'assurer que le logo est un bloc */
+    width: 200px; /* Ajuster la taille du logo si nécessaire */
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero-banner {
+    justify-content: center;
+  }
+}

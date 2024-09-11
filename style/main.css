@@ -32,6 +32,10 @@ footer {
   background-color: #343a40;
   color: white;
   gap: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
 }
 
 .footer-socials {
@@ -55,6 +59,11 @@ footer {
   font-size: 0.9rem;
 }
 
+@media only screen and (max-width: 1480px) {
+  footer {
+    position: sticky;
+  }
+}
 .company-name {
   font-size: 5rem;
   color: white;
@@ -112,6 +121,23 @@ footer {
   text-align: center;
 }
 
+@media only screen and (max-width: 1480px) {
+  .company-logo {
+    position: static; /* Retirer la position absolue pour le centrage */
+    margin: 0 auto; /* Centrer horizontalement */
+    display: block; /* S'assurer que le logo est un bloc */
+    width: 200px; /* Ajuster la taille du logo si nécessaire */
+  }
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero-banner {
+    justify-content: center;
+  }
+}
 /* Modal Section */
 .modal {
   display: none;
@@ -140,6 +166,7 @@ footer {
 form {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
 
 .close {
@@ -154,21 +181,144 @@ form {
   height: 100px;
 }
 
+@media only screen and (max-width: 1480px) {
+  .modal-content {
+    height: 50%;
+  }
+  #message {
+    height: 150px;
+  }
+}
+.presentation {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  left: -150px;
+  z-index: 3;
+  width: 50%;
+}
+.presentation p {
+  color: white;
+  width: 20%;
+  position: relative;
+  left: -150px;
+}
+
+@media only screen and (max-width: 1480px) {
+  .presentation {
+    display: none;
+  }
+}
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.product-item {
+  width: 300px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-item h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.product-item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+#boutique_header {
+  margin: 5%;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #343a40; /* Couleur de fond de la barre de navigation */
+  color: white;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   line-height: 1.6;
 }/*# sourceMappingURL=main.css.map */
