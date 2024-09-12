@@ -7,10 +7,11 @@ footer {
   background-color: #343a40;
   color: white;
   gap: 10px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   z-index: 4;
+  position: sticky;
 }
 
 .footer-socials {
@@ -35,7 +36,4 @@ footer {
 }
 
 @media only screen and (max-width: 1480px) {
-  footer {
-    position: sticky;
-  }
 }

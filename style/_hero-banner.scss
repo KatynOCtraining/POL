@@ -63,11 +63,16 @@
     width: 200px; /* Ajuster la taille du logo si nécessaire */
   }
 
+  .company-name{
+    font-size: 3rem;
+  }
+
   .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 0%;
   }
 
   .hero-banner {

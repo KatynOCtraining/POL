@@ -32,10 +32,11 @@ footer {
   background-color: #343a40;
   color: white;
   gap: 10px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   z-index: 4;
+  position: sticky;
 }
 
 .footer-socials {
@@ -59,11 +60,6 @@ footer {
   font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 1480px) {
-  footer {
-    position: sticky;
-  }
-}
 .company-name {
   font-size: 5rem;
   color: white;
@@ -128,11 +124,15 @@ footer {
     display: block; /* S'assurer que le logo est un bloc */
     width: 200px; /* Ajuster la taille du logo si nécessaire */
   }
+  .company-name {
+    font-size: 3rem;
+  }
   .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 0%;
   }
   .hero-banner {
     justify-content: center;
