@@ -1,27 +1,40 @@
-@import "./variables";
-@import "./contact-section";
-@import "./cta-button";
+// Variables globales
+$primary-color: #003366; // Couleur principale
+$white: #ffffff; // Couleur blanche
+$gray: #f2f2f2; // Couleur grise
+$button-bg-color: #0066cc; // Couleur du fond du bouton
+$button-hover-color: darken(
+  $button-bg-color,
+  10%
+); // Couleur du bouton au survol
+$icon-size: 20px; // Taille de l'icône
+$overlay-color: rgba(0, 0, 0, 0.4); // Couleur de superposition
+$secondary-color: #ffcc00; // Exemple de couleur secondaire (ajoute ceci si nécessaire)
+$text-color: #333333; // Exemple de couleur de texte (ajoute ceci si nécessaire)
+
+// Imports
+@import "navbar";
+@import "./herobanner";
+@import "./savoir-faire"; // Assurez-vous d'importer le fichier savoir-faire
+@import "./partenaires";
 @import "./footer";
-@import "./hero-banner";
-@import "./modal";
+@import "./contact";
 @import "./presentation";
-@import "./boutique";
-@import "./boutique-navbar";
-* {
+@import "./notregamme";
+
+body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: $primary-color;
+  font-style: italic;
+  z-index: 10;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-
-  line-height: 1.6;
+a {
+  text-decoration: none;
 }

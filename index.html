@@ -15,86 +15,291 @@
       src="https://kit.fontawesome.com/bb33b41c96.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/main.css" />
   </head>
 
   <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="./ressources/logo/logo.png" alt="Logo de l'entreprise" />
+        </div>
+        <ul class="navbar-links">
+          <li>
+            <a href="index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="./notregamme.html"
+              >Notre Gamme <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Élingues</a></li>
+              <li><a href="#">Tractopelle</a></li>
+              <li><a href="#">Chaînes</a></li>
+              <li><a href="#">Chasubles</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./presentation.html">Qui sommes-nous ?</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero-Banner / Carousel -->
     <section class="hero-banner">
-      <div class="hero-content">
-        <div class="header-container">
-          <h1 class="company-name">Porte Océane Levage</h1>
+      <button class="carousel-control prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="carousel">
+        <div class="carousel-item active">
+          <img
+            src="./ressources/images/carousel/exemple1.jpeg"
+            alt="Image de fond 1"
+          />
+          <div class="diapo_content">
+            <h2>Découvrez nos produits</h2>
+            <p>
+              Porte Océane Levage dispose de l'offre la plus complète de
+              produits pour tous vos projets de levage.
+            </p>
+            <a href="#" class="hero-button">Notre catalogue</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./ressources/images/carousel/exemple2.jpeg"
+            alt="Image de fond 2"
+          />
+          <div class="diapo_content">
+            <h2>Une solution sur mesure pour les professionnels</h2>
+            <p>
+              Passez directement par nos collaborateurs pour obtenir rapidement
+              toutes les informations nécessaires au bon déroulement de votre
+              projet.
+            </p>
+            <a href="#" class="hero-button">En savoir plus</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./ressources/images/carousel/exemple3.jpg"
+            alt="Image de fond 3"
+          />
+          <div class="diapo_content">
+            <h2>Nos partenaires</h2>
+            <p>
+              Profitez de notre partenariat privilégié avec des acteurs reconnus
+              du secteur et bénéficiez de toute l'expérience de notre réseau !
+            </p>
+            <a href="#" class="hero-button">Nos partenaires</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="carousel-indicators">
+        <button class="indicator active" data-slide-to="0"></button>
+        <button class="indicator" data-slide-to="1"></button>
+        <button class="indicator" data-slide-to="2"></button>
+      </div>
+    </section>
+
+    <!-- Section 1: Savoir Faire -->
+    <section class="savoir-faire">
+      <h2>Notre Savoir-Faire</h2>
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-image"
+            style="
+              background-image: url('./ressources/images/arguments/argument1.jpg');
+            "
+          >
+            <img
+              class="icon"
+              src="./ressources/images/arguments/icone2.png"
+              alt="Argument 1"
+            />
+            <h3>Une expertise reconnue</h3>
+            <p>
+              Forts de plusieurs années d’expérience, nous mettons à votre
+              service une expertise solide dans le domaine du levage
+              professionnel. Notre équipe de techniciens qualifiés s’engage à
+              vous accompagner avec des solutions adaptées et fiables. Nous
+              assurons un suivi rigoureux de chaque projet, garantissant ainsi
+              des prestations de qualité.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div
+            class="card-image"
+            style="
+              background-image: url('./ressources/images/arguments/argument2.jpeg');
+            "
+          >
+            <img
+              class="icon"
+              src="./ressources/images/arguments/icone2.png"
+              alt="Argument 2"
+            />
+            <h3>Un acteur identifié du territoire</h3>
+            <p>
+              Implantés au Havre, nous collaborons avec des entreprises de toute
+              la région normande, renforçant ainsi notre réseau de partenaires
+              locaux. Notre ancrage régional nous permet de répondre rapidement
+              aux besoins de nos clients tout en favorisant une relation de
+              proximité et de confiance. Nous sommes également reconnus pour
+              notre engagement envers le développement économique local
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div
+            class="card-image"
+            style="
+              background-image: url('./ressources/images/arguments/argument3.jpg');
+            "
+          >
+            <img
+              class="icon"
+              src="./ressources/images/arguments/icone3.png"
+              alt="Argument 3"
+            />
+            <h3>Une gamme vaste et flexible</h3>
+            <p>
+              Notre large sélection de matériel de levage répond à tous les
+              besoins, quels que soient votre secteur d’activité et la taille de
+              votre projet. Nous proposons des solutions flexibles et adaptables
+              pour s’ajuster aux spécificités de chaque demande. Vous trouverez
+              chez nous tout l’équipement nécessaire, avec des options de
+              location modulables.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div
+            class="card-image"
+            style="
+              background-image: url('./ressources/images/arguments/argument4.jpg');
+            "
+          >
+            <img
+              class="icon"
+              src="./ressources/images/arguments/icone4.png"
+              alt="Argument 4"
+            />
+            <h3>Une solution moderne</h3>
+            <p>
+              Nous investissons dans des technologies de pointe pour garantir
+              des équipements toujours à jour et en parfait état de
+              fonctionnement. En choisissant nos solutions de levage, vous
+              bénéficiez d’une sécurité accrue et de performances optimisées.
+              Nous veillons à ce que notre matériel soit régulièrement inspecté
+              et en conformité avec les dernières normes en vigueur.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div
+            class="card-image"
+            style="
+              background-image: url('./ressources/images/arguments/argument5.jpg');
+            "
+          >
+            <img
+              class="icon"
+              src="./ressources/images/arguments/icone5.png"
+              alt="Argument 5"
+            />
+            <h3>Un service humain</h3>
+            <p>
+              Nous plaçons la relation humaine au cœur de notre approche. Notre
+              équipe est à votre écoute pour comprendre vos besoins et vous
+              conseiller tout au long de votre projet. En nous choisissant, vous
+              faites le choix d’un service personnalisé et attentif, orienté
+              vers votre satisfaction et la réussite de vos opérations de
+              levage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Partenaires -->
+    <div class="partenaires-title">
+      <h2>Nos Partenaires</h2>
+    </div>
+    <section class="partenaires">
+      <div class="cards-container">
+        <a href="https://www.partenaire1.com" class="card_partner">
+          <img
+            src="./ressources/images/partenaires/partenaire1.png"
+            alt="Logo Partenaire 1"
+          />
+        </a>
+        <a href="https://www.partenaire2.com" class="card_partner">
+          <img
+            src="./ressources/images/partenaires/partenaire2.png"
+            alt="Logo Partenaire 2"
+          />
+        </a>
+        <a href="https://www.partenaire3.com" class="card_partner">
+          <img
+            src="./ressources/images/partenaires/partenaire3.png"
+            alt="Logo Partenaire 3"
+          />
+        </a>
+        <a href="https://www.partenaire4.com" class="card_partner">
+          <img
+            src="./ressources/images/partenaires/partenaire4.png"
+            alt="Logo Partenaire 4"
+          />
+        </a>
+        <a href="https://www.partenaire5.com" class="card_partner">
+          <img
+            src="./ressources/images/partenaires/partenaire5.png"
+            alt="Logo Partenaire 5"
+          />
+        </a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
           <img
             src="./ressources/logo/logo.png"
-            alt="Logo de P.O.L"
-            class="company-logo"
+            alt="Logo de l'entreprise"
+            class="footer-logo"
           />
+          <p>
+            Spécialisée dans la vente et location de matériel de levage,
+            l'entreprise accompagne les professionnels avec des solutions sur
+            mesure en Normandie et au-delà.
+          </p>
+          <p>Nous offrons des services de qualité pour nos clients.</p>
         </div>
-        <button
-          class="cta-button"
-          id="offer-button"
-          onclick="window.location.href='boutique.html';"
-        >
-          Notre offre
-        </button>
-
-        <button class="cta-button" id="contact-button">Nous contacter</button>
+        <div class="footer-right">
+          <h3>Contact</h3>
+          <p><strong>Adresse :</strong> 123 Rue Exemple, 76000 Le Havre</p>
+          <p><strong>Téléphone :</strong> 01 23 45 67 89</p>
+          <p><strong>Email :</strong> contact@entreprise.com</p>
+        </div>
       </div>
-      <section class="contact-info">
-        <p>Téléphone: 01 23 45 67 89</p>
-        <p>Adresse: 123 Rue des Exemples, 75000 Paris</p>
-      </section>
-    </section>
-
-    <footer>
-      <div class="footer-socials">
-        <a href="#" class="social-button"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="#" class="social-button"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-      </div>
-      <a href="#" class="legal-mentions">Mentions légales</a>
     </footer>
 
-    <section class="presentation">
-      <img src="./ressources/images/zz.png" alt="zz" />
-      <p>
-        Notre philosophie, la satisfaction client, la sécurité et ma sérénité
-        d'un chantier mené à bien grâce au matériel certifiés loué par Porte
-        Océane Levage. Et puis enculer le PSG, ça aussi c'est important.
-      </p>
-    </section>
-
-    <!-- Modale pour le formulaire de contact -->
-    <div id="contact-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Contactez-nous</h2>
-        <form>
-          <label for="name">Nom:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="phone">Téléphone:</label>
-          <input type="tel" id="phone" name="phone" />
-
-          <label for="reason">Raison du contact:</label>
-          <select id="reason" name="reason">
-            <option value="information">Demande d'information</option>
-            <option value="devis">Demande de devis</option>
-          </select>
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit" class="cta-button">Envoyer</button>
-        </form>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

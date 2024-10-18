@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notre Gamme</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bb33b41c96.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="./ressources/logo/logo.png" alt="Logo de l'entreprise" />
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a href="#">Notre Gamme <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Élingues</a></li>
+              <li><a href="#">Tractopelle</a></li>
+              <li><a href="#">Chaînes</a></li>
+              <li><a href="#">Chasubles</a></li>
+            </ul>
+          </li>
+          <li><a href="./presentation.html">Qui sommes-nous ?</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Bannière -->
+    <section class="about-banner">
+      <img src="./ressources/images/presentation/banner.webp" alt="" />
+      <h1>Notre Gamme</h1>
+    </section>
+
+    <!-- Catalogue -->
+
+    <main class="catalogue-section">
+      <h2>Nos Catalogues</h2>
+      <div class="catalogues-container">
+        <div class="catalogue">
+          <a href="./ressources/catalogues/catalogue1.pdf" target="_blank">
+            <img
+              src="./ressources/catalogues/couv1.png"
+              alt="Couverture Catalogue Fournisseur 1"
+            />
+          </a>
+          <h3>Catalogue Fournisseur 1</h3>
+        </div>
+        <div class="catalogue">
+          <a href="./ressources/catalogues/catalogue2.pdf" target="_blank">
+            <img
+              src="./ressources/catalogues/couv2.png"
+              alt="Couverture Catalogue Fournisseur 2"
+            />
+          </a>
+          <h3>Catalogue Fournisseur 2</h3>
+        </div>
+        <div class="catalogue">
+          <a href="./ressources/catalogues/catalogue3.pdf" target="_blank">
+            <img
+              src="./ressources/catalogues/couv3.png"
+              alt="Couverture Catalogue Fournisseur 3"
+            />
+          </a>
+          <h3>Catalogue Fournisseur 3</h3>
+        </div>
+        <div class="catalogue">
+          <a href="./ressources/catalogues/catalogue4.pdf" target="_blank">
+            <img
+              src="./ressources/catalogues/couv4.png"
+              alt="Couverture Catalogue Fournisseur 4"
+            />
+          </a>
+          <h3>Catalogue Fournisseur 4</h3>
+        </div>
+        <div class="catalogue">
+          <a href="./ressources/catalogues/catalogue5.pdf" target="_blank">
+            <img
+              src="./ressources/catalogues/couv2.png"
+              alt="Couverture Catalogue Fournisseur 5"
+            />
+          </a>
+          <h3>Catalogue Fournisseur 5</h3>
+        </div>
+      </div>
+      <button class="contact-button">
+        <a href="./contact.html" class="contact-button">Contacter un vendeur</a>
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="./ressources/logo/logo.png"
+            alt="Logo de l'entreprise"
+            class="footer-logo"
+          />
+          <p>
+            Spécialisée dans la vente et location de matériel de levage,
+            l'entreprise accompagne les professionnels avec des solutions sur
+            mesure en Normandie et au-delà.
+          </p>
+          <p>Nous offrons des services de qualité pour nos clients.</p>
+        </div>
+        <div class="footer-right">
+          <h3>Contact</h3>
+          <p><strong>Adresse :</strong> 123 Rue Exemple, 76000 Le Havre</p>
+          <p><strong>Téléphone :</strong> 01 23 45 67 89</p>
+          <p><strong>Email :</strong> contact@entreprise.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

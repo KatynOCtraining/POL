@@ -1,0 +1,145 @@
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease; // Animation de la translation
+    width: 100%; // Ajuster la largeur du carousel
+
+    .carousel-item {
+      min-width: 100%; // Chaque item prend 100% de la largeur
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // Alignement à gauche
+      color: #fff; // Couleur du texte par défaut
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Couverture de l'image
+      }
+
+      // Ajouter un overlay pour améliorer la lisibilité
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // Overlay noir semi-transparent
+        z-index: 0; // Positionner l'overlay en dessous du texte
+      }
+
+      h2,
+      p {
+        position: relative;
+
+        bottom: 20px; // Positionner en bas
+        left: 20px; // Positionnement à gauche
+        color: #fff; // Couleur du texte
+        z-index: 5; // S'assurer que le texte est au-dessus de l'image et de l'overlay
+        opacity: 1; // S'assurer que le texte est visible
+
+        padding: 10px; // Ajout de padding pour le texte
+        border-radius: 5px; // Coins arrondis
+      }
+
+      h2 {
+        font-size: 2rem; // Taille du texte pour le titre
+        margin: 0; // Supprimer la marge par défaut
+
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem; // Taille du texte pour le paragraphe
+        background-color: rgba(0, 0, 0, 0.4); // Fond sombre pour le texte
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); // Ajouter une ombre portée
+      }
+
+      .hero-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: rgba(
+          0,
+          123,
+          255,
+          0.8
+        ); // Couleur du bouton avec fond semi-transparent
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        z-index: 1; // S'assurer que le bouton est au-dessus
+      }
+    }
+  }
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); // Centre verticalement
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+    background: none;
+    font-size: 5rem;
+    border: none;
+    transition: transform 0.3s ease-in-out; // Durée et courbe d'accélération
+
+    // Ajout d'une transformation pour garder le contrôle centré
+    &:hover {
+      transform: translateY(-50%) scale(1.4); // Appliquer le scale sans déplacer verticalement
+    }
+
+    &.prev {
+      left: 20px; // Positionnement de la flèche précédente
+    }
+
+    &.next {
+      right: 20px; // Positionnement de la flèche suivante
+    }
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px; // Positionnement des indicateurs
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    gap: 5px;
+
+    .indicator {
+      width: 25px; // Largeur de l'indicateur
+      height: 25px; // Hauteur de l'indicateur
+      background-color: rgba(255, 255, 255, 0.5); // Couleur de fond par défaut
+      border-radius: 50%; // Rendre l'indicateur rond
+      cursor: pointer; // Change le curseur au survol
+      transition: background-color 0.3s; // Transition pour une animation fluide
+
+      &.active {
+        background-color: #007bff; // Couleur bleu pour l'indicateur actif
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7); // Couleur au survol
+      }
+    }
+  }
+}
+
+.diapo_content {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

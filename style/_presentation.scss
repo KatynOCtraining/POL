@@ -1,22 +1,125 @@
-.presentation {
-  position: absolute;
+.cards-container {
   display: flex;
-  flex-direction: row;
-  bottom: 0;
-  left: -150px;
-  z-index: 3;
-  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; // Espace entre les cartes
+  padding-bottom: 10%;
+}
 
-  p {
-    color: white;
-    width: 20%;
+.card_collab {
+  width: 250px; // Largeur fixe des cartes
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; // Masque le débordement
+  border-radius: 8px; // Coins arrondis
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  perspective: 1000px; // Perspective pour l'effet 3D
+  position: relative; // Nécessaire pour positionner les éléments enfants
+
+  .card-inner {
     position: relative;
-    left: -150px;
+    width: 100%; // S'étire sur toute la largeur de la carte
+    height: 100%; // S'étire sur toute la hauteur de la carte
+    transition: transform 0.6s; // Durée de la transition
+    transform-style: preserve-3d; // Préserve le style 3D
+
+    &:hover {
+      transform: rotateY(180deg); // Retourne la carte au survol
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute; // Positionnement absolu pour les deux faces
+      width: 100%; // S'étire sur toute la largeur
+      height: 100%; // S'étire sur toute la hauteur
+      backface-visibility: hidden; // Masque la face arrière lors du retournement
+      border-radius: 8px; // Coins arrondis
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; // Masque le débordement
+      background: white; // Fond de la face avant
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+    }
+
+    .card-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $primary-color; // Couleur du texte
+      background: rgba(255, 255, 255, 0.8); // Fond semi-transparent
+      transform: rotateY(
+        180deg
+      ); // Retourne la face arrière pour qu'elle soit cachée par défaut
+
+      .card-content {
+        margin: 5px;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: 2rem;
+    }
+
+    i {
+      font-size: 3rem;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
 
-@media only screen and (max-width: 1480px) {
-  .presentation {
-    display: none;
+.about-banner {
+  width: 100%; // S'étire sur toute la largeur de l'écran
+  height: 300px; // Hauteur fixe (ajustez selon vos besoins)
+  overflow: hidden; // Masque les parties de l'image qui dépassent
+  position: relative; // Nécessaire pour positionner le titre
+
+  img {
+    width: 100%; // L'image s'étire sur toute la largeur de la bannière
+    height: 100%; // L'image remplit la hauteur définie
+    object-fit: cover; // L'image remplit le conteneur tout en conservant ses proportions
+    position: absolute; // Positionnement absolu
+    top: 50%; // Positionne l'image au milieu
+    left: 50%; // Positionne l'image au centre
+    transform: translate(-50%, -50%); // Centre l'image
+  }
+
+  h1 {
+    position: absolute; // Positionnement absolu pour superposer le titre à la bannière
+    top: 42%; // Centre verticalement
+    left: 50%; // Centre horizontalement
+    transform: translate(-50%, -50%); // Centre le titre
+    color: white; // Couleur du texte
+    font-size: 4rem; // Taille de police (ajustez selon vos besoins)
+    text-align: center; // Centre le texte
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); // Ombre pour améliorer la lisibilité
+    z-index: 1; // Assure que le texte se trouve au-dessus de l'image
   }
 }
