@@ -129,6 +129,7 @@
   text-decoration: none;
   border-radius: 5px;
   z-index: 1;
+  padding: 5px;
 }
 .hero-banner .carousel-control {
   position: absolute;
@@ -232,7 +233,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Ajuster l'opacité selon le besoin */
+  background-color: rgba(4, 12, 100, 0.6); /* Ajuster l'opacité selon le besoin */
   z-index: 1; /* Met l'overlay derrière le contenu */
 }
 .savoir-faire .card .card-image h3,
@@ -243,7 +244,7 @@
   padding-right: 50px;
 }
 .savoir-faire .card .card-image .text-container {
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour améliorer la lisibilité */
+  background-color: rgb(4, 10, 255); /* Fond semi-transparent pour améliorer la lisibilité */
   padding: 15px;
   border-radius: 8px;
 }
@@ -251,6 +252,8 @@
   font-size: 2rem; /* Augmentation de la taille du titre */
   margin: 10px 0;
   text-align: left;
+  color: rgb(255, 135, 0);
+  z-index: 3000;
 }
 .savoir-faire .card .card-image p {
   color: #ffffff;
@@ -261,11 +264,13 @@
 }
 .savoir-faire .card .card-image .icon {
   position: absolute;
+  z-index: 3000;
   top: 30px;
   left: 20px;
   width: 40px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: orange;
+  border: 2px solid white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -578,10 +583,6 @@ footer .footer-right p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.animated-border-box .hero-button,
-.animated-border-box-glow .hero-button {
-  background: none;
 }
 
 .animated-border-box-glow {
